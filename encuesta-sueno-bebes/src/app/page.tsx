@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Check, Loader2, Moon, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Loader2, Sparkles } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { finalScreen, getVisibleQuestions, questions, welcome } from "@/src/lib/questions";
+import { NidoLogo } from "@/src/components/NidoLogo";
 import type { AnswerValue, Question } from "@/src/lib/questions";
 
 type Answers = Record<string, AnswerValue>;
@@ -199,10 +200,8 @@ export default function SurveyPage() {
 
       <section className="survey-panel" aria-live="polite">
         <div className="brand-row">
-          <span className="brand-mark">
-            <Moon size={18} aria-hidden="true" />
-          </span>
-          <span>Encuesta sueño bebés</span>
+          <NidoLogo />
+          <span className="brand-subtitle">Encuesta sueño bebés</span>
         </div>
 
         {!started && !submitted ? (

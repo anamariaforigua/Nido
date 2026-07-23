@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Encuesta Sueño Bebés",
-  description: "Encuesta anónima sobre sueño de bebés para familias."
+  title: "Nido | Encuesta Sueño Bebés",
+  description: "Encuesta anónima sobre sueño de bebés para familias.",
+  icons: {
+    icon: "/nido-icon.svg"
+  }
 };
 
 export default function RootLayout({

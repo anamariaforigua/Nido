@@ -3,6 +3,7 @@
 import { BarChart3, Download, Loader2, Lock, RefreshCcw } from "lucide-react";
 import { useMemo, useState } from "react";
 import { getQuestionLabel, questions } from "@/src/lib/questions";
+import { NidoLogo } from "@/src/components/NidoLogo";
 import type { AnswerValue } from "@/src/lib/questions";
 
 type SurveyResponse = {
@@ -98,6 +99,7 @@ export default function ResultsPage() {
     <main className="results-shell">
       <header className="results-header">
         <div>
+          <NidoLogo compact />
           <p className="eyebrow">Panel privado</p>
           <h1>Resultados de la encuesta</h1>
         </div>
