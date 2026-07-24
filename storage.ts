@@ -18,6 +18,8 @@ const localDataFile = path.join(process.cwd(), "data", "survey-responses.json");
 function getConnectionString() {
   return (
     process.env.DATABASE_URL ||
+    process.env.DATABASE_URL_UNPOOLED ||
+    process.env.DATABASE_URL_POOLED ||
     process.env.POSTGRES_URL ||
     process.env.POSTGRES_PRISMA_URL ||
     process.env.POSTGRES_URL_NON_POOLING ||
